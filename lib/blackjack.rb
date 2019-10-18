@@ -28,8 +28,11 @@ def initial_round
   return initial_round
 end
 
-def hit?
-  # code hit? here
+def hit?(card_total)
+  valid_inputs = ["h", "s"]
+
+  prompt_user
+  user_input = get_user_input
 end
 
 def invalid_command
