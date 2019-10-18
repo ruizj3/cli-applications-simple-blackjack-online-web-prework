@@ -28,16 +28,23 @@ def initial_round
   return initial_round
 end
 
+def invalid_command
+  # code invalid_command here
+end
+
 def hit?(card_total)
   valid_inputs = ["h", "s"]
 
   prompt_user
   user_input = get_user_input
+
+  until valid_inputs.include?(user_input)
+    invalid_command
+    prompt_user
+    user_input = get_user_input
+  end
 end
 
-def invalid_command
-  # code invalid_command here
-end
 
 #####################################################
 # get every test to pass before coding runner below #
