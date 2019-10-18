@@ -26,7 +26,8 @@ def initial_round(deal_card)
   2.times do
     deal_card
   end
-  # code #initial_round here
+  deal_card += deal_card
+  deal_card
 end
 
 def hit?
